@@ -1,4 +1,4 @@
-"""Wikimedia Commons'dan rasm topish (muallif va litsenziya bilan)."""
+"""Wikipedia Commons'dan rasm topish (muallif va litsenziya bilan)."""
 import html
 import logging
 import re
@@ -23,7 +23,7 @@ def search_image(query):
         return None
     try:
         r = requests.get(
-            "https://commons.wikimedia.org/w/api.php",
+            "https://commons.wikipedia.org/w/api.php",
             params={
                 "action": "query", "format": "json", "generator": "search",
                 "gsrsearch": f"filetype:bitmap {query}", "gsrnamespace": 6,
